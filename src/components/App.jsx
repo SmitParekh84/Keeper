@@ -23,8 +23,10 @@ function App() {
 
   return (
     <div>
-      <Header />
+      <Header />  
+      
       <CreateArea onAdd={addNote} />
+      <div className="noteflex">
       {notes.map((noteItem, index) => {
         return (
           <Note
@@ -36,6 +38,7 @@ function App() {
           />
         );
       })}
+      </div>
       <Footer />
     </div>
   );
